@@ -3,6 +3,7 @@ package it.etlabora.world.model;
 public class Country {
 
 	private Long id;
+	// Queste sono il "name" e il "code" enella jsp
 	private String name;
 	private String code;
 

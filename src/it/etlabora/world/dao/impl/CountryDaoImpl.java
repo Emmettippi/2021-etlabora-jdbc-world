@@ -24,6 +24,9 @@ public class CountryDaoImpl implements CountryDao {
 			ResultSet resultSet = st.executeQuery();
 			while (resultSet.next()) {
 				Country c = new Country();
+
+				// Questi sono i nomi delle colonne nella mia tabella "country" nel mio DB
+				// Ignorate il fatto che sia "idcountry", l'avevo erroneamente creato l'anno scorso e ho deciso di tenerlo così
 				c.setId(resultSet.getLong("idcountry"));
 				c.setName(resultSet.getString("name"));
 				c.setCode(resultSet.getString("code"));

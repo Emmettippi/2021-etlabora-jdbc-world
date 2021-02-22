@@ -24,6 +24,7 @@ public class CountryServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		List<Country> countries = countryDao.getCountryList();
+		// Questa è la variabile "countries" nella jsp
 		req.setAttribute("countries", countries);
 		req.getRequestDispatcher("pages/country-list.jsp").forward(req, resp);
 	}
